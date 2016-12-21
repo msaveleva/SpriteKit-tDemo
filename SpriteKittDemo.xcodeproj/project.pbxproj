@@ -41,6 +41,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF0B67061E0B026600C44F14 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CFA96E3E1E0AE4AA00275AB5 /* GameScene.sks */,
+				CFA96E421E0AE4AA00275AB5 /* GameScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		CF0B67071E0B026E00C44F14 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		CF0B67081E0B027500C44F14 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CFA96E441E0AE4AA00275AB5 /* GameViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CF0B67091E0B03A400C44F14 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CFA96E491E0AE4AA00275AB5 /* Assets.xcassets */,
+				CF0B670A1E0B03A900C44F14 /* Sound */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		CF0B670A1E0B03A900C44F14 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
+		CF0B670B1E0B03C500C44F14 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CFA96E461E0AE4AA00275AB5 /* Main.storyboard */,
+				CFA96E4B1E0AE4AA00275AB5 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		CF0B670D1E0B03FD00C44F14 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CFA96E401E0AE4AA00275AB5 /* Actions.sks */,
+				CFA96E4E1E0AE4AA00275AB5 /* Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		CFA96E301E0AE4AA00275AB5 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +118,13 @@
 		CFA96E3B1E0AE4AA00275AB5 /* SpriteKittDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CF0B67091E0B03A400C44F14 /* Assets */,
+				CF0B67081E0B027500C44F14 /* Controllers */,
+				CF0B67071E0B026E00C44F14 /* Helpers */,
+				CF0B67061E0B026600C44F14 /* Scenes */,
+				CF0B670B1E0B03C500C44F14 /* Storyboards */,
+				CF0B670D1E0B03FD00C44F14 /* SupportingFiles */,
 				CFA96E3C1E0AE4AA00275AB5 /* AppDelegate.swift */,
-				CFA96E3E1E0AE4AA00275AB5 /* GameScene.sks */,
-				CFA96E401E0AE4AA00275AB5 /* Actions.sks */,
-				CFA96E421E0AE4AA00275AB5 /* GameScene.swift */,
-				CFA96E441E0AE4AA00275AB5 /* GameViewController.swift */,
-				CFA96E461E0AE4AA00275AB5 /* Main.storyboard */,
-				CFA96E491E0AE4AA00275AB5 /* Assets.xcassets */,
-				CFA96E4B1E0AE4AA00275AB5 /* LaunchScreen.storyboard */,
-				CFA96E4E1E0AE4AA00275AB5 /* Info.plist */,
 			);
 			path = SpriteKittDemo;
 			sourceTree = "<group>";
@@ -314,6 +370,7 @@
 				CFA96E531E0AE4AA00275AB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
