@@ -13,6 +13,10 @@ class GameScene: SKScene {
 
     private var skyGradient: SKSpriteNode?
     private var player: SKSpriteNode?
+
+    let jumpUp = SKAction.moveBy(x: 0, y: 50, duration: 0.3)
+    let fallBack = SKAction.moveBy(x: 0, y: -50, duration: 0.3)
+    var jumpAction = SKAction()
     
     override func didMove(to view: SKView) {
         skyGradient = childNode(withName: "skyGradient") as? SKSpriteNode
@@ -25,6 +29,8 @@ class GameScene: SKScene {
             //todo: configure player
             //todo: add player jump animation for touch up and down
         }
+
+        jumpAction = SKAction.sequence([jumpUp, fallBack])
     }
     
     func touchDown(atPoint pos : CGPoint) {
@@ -40,7 +46,10 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
+//        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
+        if player?.action(forKey: "jump") == nil {
+            player?.run(jumpAction, withKey:"jump")
+        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
