@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF4C2B7F1E0D8DBC00345EEB /* UIColor+colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4C2B7E1E0D8DBC00345EEB /* UIColor+colors.swift */; };
 		CFA96E3D1E0AE4AA00275AB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA96E3C1E0AE4AA00275AB5 /* AppDelegate.swift */; };
 		CFA96E3F1E0AE4AA00275AB5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E3E1E0AE4AA00275AB5 /* GameScene.sks */; };
 		CFA96E411E0AE4AA00275AB5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E401E0AE4AA00275AB5 /* Actions.sks */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF4C2B7E1E0D8DBC00345EEB /* UIColor+colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+colors.swift"; sourceTree = "<group>"; };
 		CFA96E391E0AE4AA00275AB5 /* SpriteKittDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKittDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA96E3C1E0AE4AA00275AB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFA96E3E1E0AE4AA00275AB5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		CF4C2B7D1E0D8DAB00345EEB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CF4C2B7E1E0D8DBC00345EEB /* UIColor+colors.swift */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		CFA96E301E0AE4AA00275AB5 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 		CFA96E3B1E0AE4AA00275AB5 /* SpriteKittDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CF4C2B7D1E0D8DAB00345EEB /* Categories */,
 				CF0B67091E0B03A400C44F14 /* Assets */,
 				CF0B67081E0B027500C44F14 /* Controllers */,
 				CF0B67071E0B026E00C44F14 /* Helpers */,
@@ -205,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFA96E431E0AE4AA00275AB5 /* GameScene.swift in Sources */,
+				CF4C2B7F1E0D8DBC00345EEB /* UIColor+colors.swift in Sources */,
 				CFA96E451E0AE4AA00275AB5 /* GameViewController.swift in Sources */,
 				CFA96E3D1E0AE4AA00275AB5 /* AppDelegate.swift in Sources */,
 			);
