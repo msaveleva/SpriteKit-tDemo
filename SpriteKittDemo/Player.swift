@@ -15,6 +15,7 @@ class Player: SKSpriteNode, SKPhysicsContactDelegate {
 
     func didBegin(_ contact: SKPhysicsContact) {
         self.inAir = false
+        print("contact")
     }
 
 }

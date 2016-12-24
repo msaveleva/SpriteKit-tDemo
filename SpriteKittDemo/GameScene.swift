@@ -28,16 +28,14 @@ class GameScene: SKScene {
 
         player = childNode(withName: "player") as? Player
         if let player = self.player {
-//            player.physicsBody?.categoryBitMask = kPlayerCategory
-//            player.physicsBody?.contactTestBitMask = kIceCategory
-//            player.physicsBody?.collisionBitMask = 0
+            player.physicsBody?.categoryBitMask = kPlayerCategory
+            player.physicsBody?.contactTestBitMask = kIceCategory
         }
 
         ice = childNode(withName: "ice") as? SKSpriteNode
         if let ice = self.ice {
-//            ground.physicsBody?.categoryBitMask = kIceCategory
-//            ground.physicsBody?.contactTestBitMask = kPlayerCategory
-//            ground.physicsBody?.collisionBitMask = 0
+            ice.physicsBody?.categoryBitMask = kIceCategory
+            ice.physicsBody?.contactTestBitMask = kPlayerCategory
         }
     }
 
