@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
 
     //allow double jump
     private let kJumps = 2
@@ -24,6 +24,8 @@ class GameScene: SKScene {
     private var jumps = 0
     
     override func didMove(to view: SKView) {
+        physicsWorld.contactDelegate = self
+        
         skyGradient = childNode(withName: "skyGradient") as? SKSpriteNode
 
         player = childNode(withName: "player") as? Player
@@ -46,15 +48,16 @@ class GameScene: SKScene {
     //MARK: - Private methods
 
 
+    //MARK: - SKPhysicsContactDelegate methods
+
+    func didBegin(_ contact: SKPhysicsContact) {
+        player?.inAir = false
+        jumps = 0
+    }
+
     //MARK: - Touch methods
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let inAir = player?.inAir else { return }
-
-        if !inAir {
-            jumps = 0
-        }
-
         if jumps < kJumps {
             jumps += 1
             player?.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 200.0)) //impulse vs force?
