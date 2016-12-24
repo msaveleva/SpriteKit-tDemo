@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF4C2B7F1E0D8DBC00345EEB /* UIColor+colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4C2B7E1E0D8DBC00345EEB /* UIColor+colors.swift */; };
+		CF4C2B821E0D92C100345EEB /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4C2B811E0D92C100345EEB /* Player.swift */; };
 		CFA96E3D1E0AE4AA00275AB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA96E3C1E0AE4AA00275AB5 /* AppDelegate.swift */; };
 		CFA96E3F1E0AE4AA00275AB5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E3E1E0AE4AA00275AB5 /* GameScene.sks */; };
 		CFA96E411E0AE4AA00275AB5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E401E0AE4AA00275AB5 /* Actions.sks */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		CF4C2B7E1E0D8DBC00345EEB /* UIColor+colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+colors.swift"; sourceTree = "<group>"; };
+		CF4C2B811E0D92C100345EEB /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		CFA96E391E0AE4AA00275AB5 /* SpriteKittDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKittDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA96E3C1E0AE4AA00275AB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFA96E3E1E0AE4AA00275AB5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -109,6 +111,14 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		CF4C2B801E0D929C00345EEB /* CharaNodes */ = {
+			isa = PBXGroup;
+			children = (
+				CF4C2B811E0D92C100345EEB /* Player.swift */,
+			);
+			name = CharaNodes;
+			sourceTree = "<group>";
+		};
 		CFA96E301E0AE4AA00275AB5 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 				CF0B67091E0B03A400C44F14 /* Assets */,
 				CF0B67081E0B027500C44F14 /* Controllers */,
 				CF0B67071E0B026E00C44F14 /* Helpers */,
+				CF4C2B801E0D929C00345EEB /* CharaNodes */,
 				CF0B67061E0B026600C44F14 /* Scenes */,
 				CF0B670B1E0B03C500C44F14 /* Storyboards */,
 				CF0B670D1E0B03FD00C44F14 /* SupportingFiles */,
@@ -218,6 +229,7 @@
 				CFA96E431E0AE4AA00275AB5 /* GameScene.swift in Sources */,
 				CF4C2B7F1E0D8DBC00345EEB /* UIColor+colors.swift in Sources */,
 				CFA96E451E0AE4AA00275AB5 /* GameViewController.swift in Sources */,
+				CF4C2B821E0D92C100345EEB /* Player.swift in Sources */,
 				CFA96E3D1E0AE4AA00275AB5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

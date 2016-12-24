@@ -9,63 +9,68 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
+
+    //allow double jump
+    private let kJumps = 2
+
+    private let kPlayerCategory: UInt32 = 1
+    private let kIceCategory: UInt32 = 2
 
     private var skyGradient: SKSpriteNode?
-    private var player: SKSpriteNode?
+    private var player: Player?
+    private var ice: SKSpriteNode?
 
-    let jumpUp = SKAction.moveBy(x: 0, y: 50, duration: 0.3)
-    let fallBack = SKAction.moveBy(x: 0, y: -50, duration: 0.3)
-    var jumpAction = SKAction()
+    private var jumps = 0
     
     override func didMove(to view: SKView) {
+        physicsWorld.contactDelegate = self
+        
         skyGradient = childNode(withName: "skyGradient") as? SKSpriteNode
-        if let skyGradient = self.skyGradient {
-            //todo: configure
-        }
 
-        player = childNode(withName: "player") as? SKSpriteNode
+        player = childNode(withName: "player") as? Player
         if let player = self.player {
-            //todo: configure player
-            //todo: add player jump animation for touch up and down
+            player.physicsBody?.categoryBitMask = kPlayerCategory
+            player.physicsBody?.contactTestBitMask = kIceCategory
         }
 
-        jumpAction = SKAction.sequence([jumpUp, fallBack])
+        ice = childNode(withName: "ice") as? SKSpriteNode
+        if let ice = self.ice {
+            ice.physicsBody?.categoryBitMask = kIceCategory
+            ice.physicsBody?.contactTestBitMask = kPlayerCategory
+        }
     }
-    
-    func touchDown(atPoint pos : CGPoint) {
 
+    override func update(_ currentTime: TimeInterval) {
+        // Called before each frame is rendered
     }
-    
-    func touchMoved(toPoint pos : CGPoint) {
 
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
+    //MARK: - Private methods
 
+
+    //MARK: - SKPhysicsContactDelegate methods
+
+    func didBegin(_ contact: SKPhysicsContact) {
+        player?.inAir = false
+        jumps = 0
     }
-    
+
+    //MARK: - Touch methods
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
-        if player?.action(forKey: "jump") == nil {
-            player?.run(jumpAction, withKey:"jump")
+        if jumps < kJumps {
+            jumps += 1
+            player?.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 200.0)) //impulse vs force?
         }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
     }
-    
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
-    }
+
 }
