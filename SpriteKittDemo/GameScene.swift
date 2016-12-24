@@ -11,27 +11,33 @@ import GameplayKit
 
 class GameScene: SKScene {
 
+    //allow double jump
+    private let kJumps = 2
+
+    private let kPlayerCategory: UInt32 = 1
+    private let kIceCategory: UInt32 = 2
+
     private var skyGradient: SKSpriteNode?
-    private var player: SKSpriteNode?
-    private var ground: SKSpriteNode?
+    private var player: Player?
+    private var ice: SKSpriteNode?
+
+    private var jumps = 0
     
     override func didMove(to view: SKView) {
         skyGradient = childNode(withName: "skyGradient") as? SKSpriteNode
-        if let skyGradient = self.skyGradient {
-            //todo: configure
-        }
 
-        player = childNode(withName: "player") as? SKSpriteNode
+        player = childNode(withName: "player") as? Player
         if let player = self.player {
-            //todo: configure player
-            player.physicsBody?.isDynamic = true
+//            player.physicsBody?.categoryBitMask = kPlayerCategory
+//            player.physicsBody?.contactTestBitMask = kIceCategory
+//            player.physicsBody?.collisionBitMask = 0
         }
 
-        ground = childNode(withName: "ground") as? SKSpriteNode
-        if let ground = self.ground {
-            ground.physicsBody = SKPhysicsBody(rectangleOf: ground.frame.size)
-            //This makes body static and allows the physics engine to optimize its calculations ignoring any forces for this body. 
-            ground.physicsBody?.isDynamic = false
+        ice = childNode(withName: "ice") as? SKSpriteNode
+        if let ice = self.ice {
+//            ground.physicsBody?.categoryBitMask = kIceCategory
+//            ground.physicsBody?.contactTestBitMask = kPlayerCategory
+//            ground.physicsBody?.collisionBitMask = 0
         }
     }
 
@@ -45,8 +51,16 @@ class GameScene: SKScene {
     //MARK: - Touch methods
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //todo: add check – ignore if in air. Allow double jump.
-        player?.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 200.0)) //impulse vs force?
+        guard let inAir = player?.inAir else { return }
+
+        if !inAir {
+            jumps = 0
+        }
+
+        if jumps < kJumps {
+            jumps += 1
+            player?.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 200.0)) //impulse vs force?
+        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

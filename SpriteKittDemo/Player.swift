@@ -9,8 +9,12 @@
 import Foundation
 import SpriteKit
 
-class Player: SKSpriteNode {
+class Player: SKSpriteNode, SKPhysicsContactDelegate {
 
+    public var inAir = false
 
+    func didBegin(_ contact: SKPhysicsContact) {
+        self.inAir = false
+    }
 
 }
