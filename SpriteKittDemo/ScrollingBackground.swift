@@ -18,29 +18,32 @@ class ScrollingBackground: SKSpriteNode {
     private var secondNode: SKSpriteNode?
 
     public func configureScrollingBackground() {
-        firstNode = SKSpriteNode(imageNamed: "backgroundTest")
-        secondNode = SKSpriteNode(imageNamed: "backgroundTest")
+        firstNode = SKSpriteNode(imageNamed: backgroundImageName)
+        secondNode = SKSpriteNode(imageNamed: backgroundImageName)
 
         guard let firstNode = self.firstNode,
             let secondNode = self.secondNode else { return }
 
-        firstNode.anchorPoint = CGPoint.zero
-        firstNode.position = CGPoint(x: -self.size.width/2, y: -self.size.height/2)
+        firstNode.anchorPoint = CGPoint(x: 0, y: firstNode.anchorPoint.y)
+        firstNode.position = CGPoint(x: -self.size.width/2, y: firstNode.position.y)
         addChild(firstNode)
 
-        secondNode.anchorPoint = CGPoint.zero
-        secondNode.position = CGPoint(x: -self.size.width/2 + secondNode.size.width, y: -self.size.height/2)
+        secondNode.anchorPoint = CGPoint(x: 0, y: secondNode.anchorPoint.y)
+        secondNode.position = CGPoint(x: -self.size.width/2 + firstNode.size.width, y: secondNode.position.y)
         addChild(secondNode)
     }
 
     public func update(currentTime: TimeInterval) {
-        guard let firstNode = self.firstNode,
-            let secondNode = self.secondNode else { return }
+        for node in children {
+            guard let sprite = node as? SKSpriteNode else { return }
 
-        firstNode.position = CGPoint(x: firstNode.position.x - self.velocity, y: firstNode.position.y)
-        secondNode.position = CGPoint(x: secondNode.position.x - self.velocity, y: secondNode.position.y)
+            sprite.position = CGPoint(x: node.position.x - velocity, y: node.position.y)
 
-        //todo: add point check for firstNode
+            if sprite.position.x + sprite.size.width <= -self.size.width/2 {
+                let delta = sprite.position.x + sprite.size.width
+                sprite.position.x = sprite.size.width * CGFloat(children.count - 1) + delta
+            }
+        }
     }
 
 }
