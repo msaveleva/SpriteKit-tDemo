@@ -13,7 +13,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     //allow double jump
     private let kJumps = 2
-    private let kCityScrollingVelocity: CGFloat = 5.0
+    private let kCityScrollingVelocity: CGFloat = 20.0
 
     private let kPlayerCategory: UInt32 = 1
     private let kIceCategory: UInt32 = 2
@@ -50,7 +50,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     private func configureBackground() {
         scrollingCityBackground?.velocity = kCityScrollingVelocity
-        scrollingCityBackground?.backgroundImageName = "testImage"
+        scrollingCityBackground?.backgroundImageName = "backgroundTest"
         scrollingCityBackground?.configureScrollingBackground()
     }
 

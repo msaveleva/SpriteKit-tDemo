@@ -18,8 +18,8 @@ class ScrollingBackground: SKSpriteNode {
     private var secondNode: SKSpriteNode?
 
     public func configureScrollingBackground() {
-        firstNode = SKSpriteNode(color: .green, size: size)
-        secondNode = SKSpriteNode(color: .red, size: size)
+        firstNode = SKSpriteNode(imageNamed: "backgroundTest")
+        secondNode = SKSpriteNode(imageNamed: "backgroundTest")
 
         guard let firstNode = self.firstNode,
             let secondNode = self.secondNode else { return }
