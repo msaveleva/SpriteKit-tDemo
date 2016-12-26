@@ -30,6 +30,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         skyGradient = childNode(withName: "skyGradient") as? SKSpriteNode
 
+        scrollingCityBackground = childNode(withName: "scrollingCityBackground") as? ScrollingBackground
+        if let _ = self.scrollingCityBackground {
+            configureBackground()
+        }
+
         player = childNode(withName: "player") as? Player
         if let player = self.player {
             player.physicsBody?.categoryBitMask = kPlayerCategory
@@ -40,11 +45,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if let ice = self.ice {
             ice.physicsBody?.categoryBitMask = kIceCategory
             ice.physicsBody?.contactTestBitMask = kPlayerCategory
-        }
-
-        scrollingCityBackground = childNode(withName: "scrollingCityBackground") as? ScrollingBackground
-        if let _ = self.scrollingCityBackground {
-            configureBackground()
         }
     }
 

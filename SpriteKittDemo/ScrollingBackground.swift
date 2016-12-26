@@ -24,6 +24,10 @@ class ScrollingBackground: SKSpriteNode {
         guard let firstNode = self.firstNode,
             let secondNode = self.secondNode else { return }
 
+        let multiplier = firstNode.size.width / firstNode.size.height
+        firstNode.size = CGSize(width: size.height * multiplier, height: size.height)
+        secondNode.size = CGSize(width: size.height * multiplier, height: size.height)
+
         firstNode.anchorPoint = CGPoint(x: 0, y: firstNode.anchorPoint.y)
         firstNode.position = CGPoint(x: -self.size.width/2, y: firstNode.position.y)
         addChild(firstNode)
