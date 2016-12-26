@@ -14,10 +14,12 @@ class ScrollingBackground: SKSpriteNode {
     public var velocity: CGFloat = 10.0
     public var backgroundImageName = ""
 
+    //todo: dynamic nodes
     private var firstNode: SKSpriteNode?
     private var secondNode: SKSpriteNode?
 
     public func configureScrollingBackground() {
+        //todo: dynamic nodes
         firstNode = SKSpriteNode(imageNamed: backgroundImageName)
         secondNode = SKSpriteNode(imageNamed: backgroundImageName)
 
