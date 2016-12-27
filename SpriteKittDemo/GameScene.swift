@@ -13,9 +13,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     //allow double jump
     private let kJumps = 2
-    private let kCityScrollingVelocity: CGFloat = 20.0
-    private let kMountainsVelocity: CGFloat = 5.0
-    private let kCloudsVelocity: CGFloat = 2.0
+    private let kCityScrollingVelocity: CGFloat = 20.0 / 2
+    private let kMountainsVelocity: CGFloat = 5.0 / 2
+    private let kCloudsVelocity: CGFloat = 2.0 / 2
 
     private let kPlayerCategory: UInt32 = 1
     private let kIceCategory: UInt32 = 2
