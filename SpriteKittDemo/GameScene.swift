@@ -64,19 +64,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     private func configureCityBackground() {
         scrollingCityBackground?.velocity = kCityScrollingVelocity
-        scrollingCityBackground?.backgroundImagesNames = ["city01", "city02"]
+        scrollingCityBackground?.backgroundImagesNames = ["city01", "city02", "city03", "city04", "city05", "city06", "city07", "city08"]
         scrollingCityBackground?.configureScrollingBackground()
     }
 
     private func configureMountainsBackground() {
         scrollingMountainsBackground?.velocity = kMountainsVelocity
-        scrollingMountainsBackground?.backgroundImagesNames = ["mountains01", "mountains02"]
+        scrollingMountainsBackground?.backgroundImagesNames = ["mountains01", "mountains02", "mountains03", "mountains04", "mountains05", "mountains06", "mountains07", "mountains08"]
         scrollingMountainsBackground?.configureScrollingBackground()
     }
 
     private func configureCloudsBackground() {
         scrollingCloudsBackground?.velocity = kCloudsVelocity
-        scrollingCloudsBackground?.backgroundImagesNames = ["clouds01", "clouds02"]
+        scrollingCloudsBackground?.backgroundImagesNames = ["clouds01", "clouds02", "clouds03", "clouds04", "clouds05", "clouds06", "clouds07", "clouds08"]
         scrollingCloudsBackground?.configureScrollingBackground()
     }
 
