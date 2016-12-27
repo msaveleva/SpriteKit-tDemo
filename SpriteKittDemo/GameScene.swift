@@ -13,6 +13,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     //allow double jump
     private let kJumps = 2
+    private let kCityScrollingVelocity: CGFloat = 20.0
 
     private let kPlayerCategory: UInt32 = 1
     private let kIceCategory: UInt32 = 2
@@ -20,6 +21,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var skyGradient: SKSpriteNode?
     private var player: Player?
     private var ice: SKSpriteNode?
+    private var scrollingCityBackground: ScrollingBackground?
 
     private var jumps = 0
     
@@ -27,6 +29,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
         
         skyGradient = childNode(withName: "skyGradient") as? SKSpriteNode
+
+        scrollingCityBackground = childNode(withName: "scrollingCityBackground") as? ScrollingBackground
+        if let _ = self.scrollingCityBackground {
+            configureBackground()
+        }
 
         player = childNode(withName: "player") as? Player
         if let player = self.player {
@@ -41,8 +48,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
 
+    private func configureBackground() {
+        scrollingCityBackground?.velocity = kCityScrollingVelocity
+        scrollingCityBackground?.backgroundImagesNames = ["backgroundTest", "backgroundTest"]
+        scrollingCityBackground?.configureScrollingBackground()
+    }
+
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        scrollingCityBackground?.update(currentTime: currentTime)
     }
 
     //MARK: - Private methods
