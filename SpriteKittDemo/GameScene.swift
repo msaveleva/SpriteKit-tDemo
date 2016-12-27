@@ -62,6 +62,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
 
+    override func update(_ currentTime: TimeInterval) {
+        // Called before each frame is rendered
+        scrollingCityBackground?.update(currentTime: currentTime)
+        scrollingMountainsBackground?.update(currentTime: currentTime)
+        scrollingCloudsBackground?.update(currentTime: currentTime)
+    }
+
+    //MARK: - Private methods
     private func configureCityBackground() {
         scrollingCityBackground?.velocity = kCityScrollingVelocity
         scrollingCityBackground?.backgroundImagesNames = ["city01", "city02", "city03", "city04", "city05", "city06", "city07", "city08"]
@@ -79,16 +87,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scrollingCloudsBackground?.backgroundImagesNames = ["clouds01", "clouds02", "clouds03", "clouds04", "clouds05", "clouds06", "clouds07", "clouds08"]
         scrollingCloudsBackground?.configureScrollingBackground()
     }
-
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
-        scrollingCityBackground?.update(currentTime: currentTime)
-        scrollingMountainsBackground?.update(currentTime: currentTime)
-        scrollingCloudsBackground?.update(currentTime: currentTime)
-    }
-
-    //MARK: - Private methods
-
 
     //MARK: - SKPhysicsContactDelegate methods
 
