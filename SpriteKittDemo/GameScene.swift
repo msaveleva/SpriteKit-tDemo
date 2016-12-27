@@ -53,6 +53,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if let player = self.player {
             player.physicsBody?.categoryBitMask = kPlayerCategory
             player.physicsBody?.contactTestBitMask = kIceCategory
+            player.configureAnimation()
         }
 
         ice = childNode(withName: "ice") as? SKSpriteNode
