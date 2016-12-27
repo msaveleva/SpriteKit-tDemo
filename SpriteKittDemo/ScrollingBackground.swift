@@ -16,6 +16,8 @@ class ScrollingBackground: SKSpriteNode {
     public var backgroundImagesNames = [String]()
 
     public func configureScrollingBackground() {
+        color = .clear
+        
         for i in 0...backgroundImagesNames.count - 1 {
             let node = SKSpriteNode(imageNamed: backgroundImagesNames[i])
 

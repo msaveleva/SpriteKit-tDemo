@@ -13,7 +13,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     //allow double jump
     private let kJumps = 2
-    private let kCityScrollingVelocity: CGFloat = 20.0
+    private let kCityScrollingVelocity: CGFloat = 20.0 / 2
+    private let kMountainsVelocity: CGFloat = 5.0 / 2
+    private let kCloudsVelocity: CGFloat = 2.0 / 2
 
     private let kPlayerCategory: UInt32 = 1
     private let kIceCategory: UInt32 = 2
@@ -22,6 +24,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var player: Player?
     private var ice: SKSpriteNode?
     private var scrollingCityBackground: ScrollingBackground?
+    private var scrollingMountainsBackground: ScrollingBackground?
+    private var scrollingCloudsBackground: ScrollingBackground?
 
     private var jumps = 0
     
@@ -30,9 +34,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         skyGradient = childNode(withName: "skyGradient") as? SKSpriteNode
 
+        scrollingCloudsBackground = childNode(withName: "scrollingCloudsBackground") as? ScrollingBackground
+        if let _ = self.scrollingCloudsBackground {
+            configureCloudsBackground()
+        }
+
+        scrollingMountainsBackground = childNode(withName: "scrollingMountainsBackground") as? ScrollingBackground
+        if let _ = self.scrollingMountainsBackground {
+            configureMountainsBackground()
+        }
+
         scrollingCityBackground = childNode(withName: "scrollingCityBackground") as? ScrollingBackground
         if let _ = self.scrollingCityBackground {
-            configureBackground()
+            configureCityBackground()
         }
 
         player = childNode(withName: "player") as? Player
@@ -48,15 +62,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
 
-    private func configureBackground() {
+    private func configureCityBackground() {
         scrollingCityBackground?.velocity = kCityScrollingVelocity
-        scrollingCityBackground?.backgroundImagesNames = ["backgroundTest", "backgroundTest"]
+        scrollingCityBackground?.backgroundImagesNames = ["city01", "city02"]
         scrollingCityBackground?.configureScrollingBackground()
+    }
+
+    private func configureMountainsBackground() {
+        scrollingMountainsBackground?.velocity = kMountainsVelocity
+        scrollingMountainsBackground?.backgroundImagesNames = ["mountains01", "mountains02"]
+        scrollingMountainsBackground?.configureScrollingBackground()
+    }
+
+    private func configureCloudsBackground() {
+        scrollingCloudsBackground?.velocity = kCloudsVelocity
+        scrollingCloudsBackground?.backgroundImagesNames = ["clouds01", "clouds02"]
+        scrollingCloudsBackground?.configureScrollingBackground()
     }
 
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
         scrollingCityBackground?.update(currentTime: currentTime)
+        scrollingMountainsBackground?.update(currentTime: currentTime)
+        scrollingCloudsBackground?.update(currentTime: currentTime)
     }
 
     //MARK: - Private methods
