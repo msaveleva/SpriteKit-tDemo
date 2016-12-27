@@ -50,7 +50,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     private func configureBackground() {
         scrollingCityBackground?.velocity = kCityScrollingVelocity
-        scrollingCityBackground?.backgroundImageName = "backgroundTest"
+        scrollingCityBackground?.backgroundImagesNames = ["backgroundTest", "backgroundTest"]
         scrollingCityBackground?.configureScrollingBackground()
     }
 

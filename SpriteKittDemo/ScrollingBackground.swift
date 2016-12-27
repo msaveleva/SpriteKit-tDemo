@@ -12,31 +12,20 @@ import SpriteKit
 class ScrollingBackground: SKSpriteNode {
 
     public var velocity: CGFloat = 10.0
-    public var backgroundImageName = ""
-
-    //todo: dynamic nodes
-    private var firstNode: SKSpriteNode?
-    private var secondNode: SKSpriteNode?
+    //All images should have the same size.
+    public var backgroundImagesNames = [String]()
 
     public func configureScrollingBackground() {
-        //todo: dynamic nodes
-        firstNode = SKSpriteNode(imageNamed: backgroundImageName)
-        secondNode = SKSpriteNode(imageNamed: backgroundImageName)
+        for i in 0...backgroundImagesNames.count - 1 {
+            let node = SKSpriteNode(imageNamed: backgroundImagesNames[i])
 
-        guard let firstNode = self.firstNode,
-            let secondNode = self.secondNode else { return }
+            let multiplier = node.size.width / node.size.height
+            node.size = CGSize(width: size.height * multiplier, height: size.height)
 
-        let multiplier = firstNode.size.width / firstNode.size.height
-        firstNode.size = CGSize(width: size.height * multiplier, height: size.height)
-        secondNode.size = CGSize(width: size.height * multiplier, height: size.height)
-
-        firstNode.anchorPoint = CGPoint(x: 0, y: firstNode.anchorPoint.y)
-        firstNode.position = CGPoint(x: -self.size.width/2, y: firstNode.position.y)
-        addChild(firstNode)
-
-        secondNode.anchorPoint = CGPoint(x: 0, y: secondNode.anchorPoint.y)
-        secondNode.position = CGPoint(x: -self.size.width/2 + firstNode.size.width, y: secondNode.position.y)
-        addChild(secondNode)
+            node.anchorPoint = CGPoint(x: 0, y: node.anchorPoint.y)
+            node.position = CGPoint(x: -self.size.width/2 + CGFloat(i) * node.size.width, y: node.position.y)
+            addChild(node)
+        }
     }
 
     public func update(currentTime: TimeInterval) {
