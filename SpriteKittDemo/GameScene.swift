@@ -27,6 +27,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var scrollingMountainsBackground: ScrollingBackground?
     private var scrollingCloudsBackground: ScrollingBackground?
 
+    private var platformsGenerator: PlatformsGenerator?
+    private var platformsNode: SKSpriteNode?
+
     private var jumps = 0
     
     override func didMove(to view: SKView) {
@@ -60,13 +63,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             ice.physicsBody?.categoryBitMask = kIceCategory
             ice.physicsBody?.contactTestBitMask = kPlayerCategory
         }
+
+        platformsGenerator = PlatformsGenerator()
+        platformsNode = platformsGenerator?.configurePlatformsNode()
+
+        if let platformsNode = self.platformsNode {
+            addChild(platformsNode)
+            platformsNode.position = .zero
+            platformsNode.zPosition = 2
+        }
     }
 
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
         scrollingCityBackground?.update(currentTime: currentTime)
         scrollingMountainsBackground?.update(currentTime: currentTime)
         scrollingCloudsBackground?.update(currentTime: currentTime)
+
+        platformsGenerator?.updatePlatform(velocity: kCityScrollingVelocity)
     }
 
     //MARK: - Private methods

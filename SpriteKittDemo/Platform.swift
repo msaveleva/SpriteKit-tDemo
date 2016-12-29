@@ -17,9 +17,5 @@ class Platform: SKShapeNode {
     public func configure() {
         fillColor = .platformColor()
     }
-
-    //todo: use this
-//    init(rect: CGRect, cornerRadius: CGFloat)
-//    Creates a shape with a rectangular path with rounded corners.
-
+    
 }
