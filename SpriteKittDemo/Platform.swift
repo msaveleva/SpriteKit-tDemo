@@ -9,14 +9,12 @@
 import Foundation
 import SpriteKit
 
-class Platform: SKShapeNode {
+class Platform: SKSpriteNode {
 
     private let kPlayerCategory: UInt32 = 1
     private let kIceCategory: UInt32 = 2
 
     public func configure() {
-        fillColor = .platformColor()
-
         physicsBody = SKPhysicsBody(rectangleOf: frame.size)
         physicsBody?.isDynamic = false
         physicsBody?.categoryBitMask = kIceCategory

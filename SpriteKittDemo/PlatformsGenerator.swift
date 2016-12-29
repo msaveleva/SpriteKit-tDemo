@@ -14,11 +14,12 @@ class PlatformsGenerator {
 
     private let kCornerRadius: CGFloat = 30.0
     private let kPlatformHeight: CGFloat = 60.0
-    private let kMaxPlatformsOnScreen = 10
-    private let kMinSpace: Int = 50
+    private let kMaxPlatformsOnScreen = 5
+    private let kMinSpace: Int = 120
 
     private let randomDistribPlatformWidth = GKRandomDistribution(lowestValue: 150, highestValue: 500)
-    private let randomDistribPlatformPosition = GKRandomDistribution(lowestValue: -200, highestValue: 300)
+    private let randomDistribPlatformPositionX = GKRandomDistribution(lowestValue: 0, highestValue: 300)
+    private let randomDistribPlatformPositionY = GKRandomDistribution(lowestValue: -250, highestValue: 80)
 
     private var platforms = [Platform]()
     private var parentNode = SKSpriteNode()
@@ -33,7 +34,7 @@ class PlatformsGenerator {
         generatePlatformsFor(parentNode: parentNode)
 
         for platform in platforms {
-            let platformRightPoint = platform.position.x + platform.frame.size.width
+            let platformRightPoint = platform.frame.origin.x + platform.frame.size.width
             let parentNodeLeftSize = parentNode.position.x - parentNode.frame.size.width/2
             if platformRightPoint < parentNodeLeftSize {
                 if let index = platforms.index(of: platform) {
@@ -62,7 +63,7 @@ class PlatformsGenerator {
     private func createPlatform() -> Platform? {
         let randomRect = calculateRandomPlatformRect()
 
-        let platform = Platform(rect: randomRect, cornerRadius: kCornerRadius)
+        let platform = Platform(color: .platformColor(), size: randomRect.size)
         platform.configure()
 
         return platform
@@ -82,9 +83,11 @@ class PlatformsGenerator {
 
         if let lPlatform = lastPlatform {
             let startPoint = lPlatform.frame.origin.x + lPlatform.frame.size.width
-            return CGPoint(x: randomDistribPlatformPosition.nextInt() + Int(startPoint) + kMinSpace, y: randomDistribPlatformPosition.nextInt())
+            return CGPoint(x: randomDistribPlatformPositionX.nextInt() + Int(startPoint) + kMinSpace,
+                           y: randomDistribPlatformPositionY.nextInt() + kMinSpace)
         } else {
-            return CGPoint(x: randomDistribPlatformPosition.nextInt(), y: randomDistribPlatformPosition.nextInt())
+            return CGPoint(x: randomDistribPlatformPositionX.nextInt() + Int(parentNode.frame.size.width),
+                           y: randomDistribPlatformPositionY.nextInt())
         }
     }
 
