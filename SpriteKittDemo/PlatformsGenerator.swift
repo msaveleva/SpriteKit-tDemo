@@ -22,9 +22,8 @@ class PlatformsGenerator {
     private var platforms = [Platform]()
     private var parentNode = SKSpriteNode()
 
-    public func configurePlatformsNode() -> SKSpriteNode {
-        let screenSize = UIScreen.main.bounds.size
-        parentNode = SKSpriteNode(color: .clear, size: screenSize)
+    public func configurePlatformsNode(size: CGSize) -> SKSpriteNode {
+        parentNode = SKSpriteNode(color: .clear, size: size)
 
         return parentNode
     }

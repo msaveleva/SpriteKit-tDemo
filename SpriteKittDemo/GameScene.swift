@@ -65,11 +65,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
 
         platformsGenerator = PlatformsGenerator()
-        platformsNode = platformsGenerator?.configurePlatformsNode()
+        platformsNode = platformsGenerator?.configurePlatformsNode(size: self.size)
 
         if let platformsNode = self.platformsNode {
             addChild(platformsNode)
-            platformsNode.position = .zero
+            platformsNode.position = self.position
             platformsNode.zPosition = 2
         }
     }
