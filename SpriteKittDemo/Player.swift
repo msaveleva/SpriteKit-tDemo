@@ -13,7 +13,7 @@ class Player: SKSpriteNode, SKPhysicsContactDelegate {
 
     public var inAir = false
 
-    public func configureAnimation() {
+    public func playRunAnimation() {
         let run1 = SKTexture(imageNamed: "hero01")
         let run2 = SKTexture(imageNamed: "hero02")
         let run3 = SKTexture(imageNamed: "hero03")
@@ -24,6 +24,10 @@ class Player: SKSpriteNode, SKPhysicsContactDelegate {
         let foreverRun = SKAction.repeatForever(runAnimation)
 
         run(foreverRun) 
+    }
+
+    public func playJumpAnimation() {
+        //todo: implement
     }
 
 }
