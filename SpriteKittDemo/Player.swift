@@ -20,9 +20,10 @@ class Player: SKSpriteNode, SKPhysicsContactDelegate {
         let run4 = SKTexture(imageNamed: "hero04")
 
         let runTexture = [run1, run2, run3, run4]
-        let runAnimation = SKAction.animate(with: runTexture, timePerFrame: 0.06, resize: true, restore: false)
+        let runAnimation = SKAction.animate(with: runTexture, timePerFrame: 0.1, resize: false, restore: true)
+        let foreverRun = SKAction.repeatForever(runAnimation)
 
-//        run(runAnimation)
+        run(foreverRun) 
     }
 
 }
