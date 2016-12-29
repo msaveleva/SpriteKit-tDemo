@@ -62,7 +62,8 @@ class PlatformsGenerator {
     private func createPlatform() -> Platform? {
         let randomSize = calculateRandomPlatformSize()
 
-        let platform = Platform(color: .platformColor(), size: randomSize)
+        let platform = Platform(imageNamed: "Platform")
+        platform.size = randomSize
         platform.configure()
 
         return platform
