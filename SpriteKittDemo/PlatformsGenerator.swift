@@ -16,7 +16,7 @@ class PlatformsGenerator {
     private let kPlatformHeight: CGFloat = 60.0
     private let kMaxPlatformsOnScreen = 2
 
-    private let randomDistribPlatformWidth = GKRandomDistribution(lowestValue: 70, highestValue: 100)
+    private let randomDistribPlatformWidth = GKRandomDistribution(lowestValue: 70, highestValue: 300)
     private let randomDistribPlatformPosition = GKRandomDistribution(lowestValue: -100, highestValue: 100)
 
     private var platforms = [Platform]()
@@ -37,6 +37,7 @@ class PlatformsGenerator {
             let parentNodeLeftSize = parentNode.position.x - parentNode.frame.size.width/2
             if platformRightPoint < parentNodeLeftSize {
                 if let index = platforms.index(of: platform) {
+                    platform.removeFromParent()
                     platforms.remove(at: index)
                 }
             } else {
