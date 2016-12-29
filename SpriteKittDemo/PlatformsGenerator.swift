@@ -33,7 +33,7 @@ class PlatformsGenerator {
         generatePlatformsFor(parentNode: parentNode)
 
         for platform in platforms {
-            let platformRightPoint = platform.position.x + platform.size.width
+            let platformRightPoint = platform.position.x + platform.frame.size.width
             let parentNodeLeftSize = parentNode.position.x - parentNode.frame.size.width/2
             if platformRightPoint < parentNodeLeftSize {
                 if let index = platforms.index(of: platform) {
@@ -56,13 +56,13 @@ class PlatformsGenerator {
             platform.position = calculateRandomPlatformPosition()
             platforms.append(platform)
             parentNode.addChild(platform)
+            platform.configure()
         }
     }
 
     private func createPlatform() -> Platform? {
         let randomRect = calculateRandomPlatformRect()
         let platform = Platform(rect: randomRect, cornerRadius: kCornerRadius) //maybe it already has 0;0 origin
-        platform.configure()
 
         return platform
     }

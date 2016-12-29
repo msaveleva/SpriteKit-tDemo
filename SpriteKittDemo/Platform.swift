@@ -11,11 +11,17 @@ import SpriteKit
 
 class Platform: SKShapeNode {
 
-    //todo: make custom init
-    public var size = CGSize.zero
+    private let kPlayerCategory: UInt32 = 1
+    private let kIceCategory: UInt32 = 2
 
     public func configure() {
         fillColor = .platformColor()
+
+        physicsBody = SKPhysicsBody(rectangleOf: frame.size)
+        physicsBody?.isDynamic = false
+        physicsBody?.categoryBitMask = kIceCategory
+        physicsBody?.collisionBitMask = 0
+        physicsBody?.contactTestBitMask = kPlayerCategory
     }
     
 }
