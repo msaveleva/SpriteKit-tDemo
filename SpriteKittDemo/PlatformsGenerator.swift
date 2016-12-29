@@ -12,7 +12,6 @@ import GameplayKit
 
 class PlatformsGenerator {
 
-    private let kCornerRadius: CGFloat = 30.0
     private let kPlatformHeight: CGFloat = 60.0
     private let kMaxPlatformsOnScreen = 5
     private let kMinSpace: Int = 120
@@ -61,20 +60,18 @@ class PlatformsGenerator {
     }
 
     private func createPlatform() -> Platform? {
-        let randomRect = calculateRandomPlatformRect()
+        let randomSize = calculateRandomPlatformSize()
 
-        let platform = Platform(color: .platformColor(), size: randomRect.size)
+        let platform = Platform(color: .platformColor(), size: randomSize)
         platform.configure()
 
         return platform
     }
 
-    private func calculateRandomPlatformRect() -> CGRect {
+    private func calculateRandomPlatformSize() -> CGSize {
         let platformWidth = CGFloat(randomDistribPlatformWidth.nextInt())
 
-        return CGRect(x: -platformWidth / 2,
-                      y: -kPlatformHeight / 2,
-                      width: platformWidth,
+        return CGSize(width: platformWidth,
                       height: kPlatformHeight)
     }
 
