@@ -56,13 +56,14 @@ class PlatformsGenerator {
             platform.position = calculateRandomPlatformPosition()
             platforms.append(platform)
             parentNode.addChild(platform)
-            platform.configure()
         }
     }
 
     private func createPlatform() -> Platform? {
         let randomRect = calculateRandomPlatformRect()
-        let platform = Platform(rect: randomRect, cornerRadius: kCornerRadius) //maybe it already has 0;0 origin
+
+        let platform = Platform(rect: randomRect, cornerRadius: kCornerRadius)
+        platform.configure()
 
         return platform
     }
@@ -70,8 +71,8 @@ class PlatformsGenerator {
     private func calculateRandomPlatformRect() -> CGRect {
         let platformWidth = CGFloat(randomDistribPlatformWidth.nextInt())
 
-        return CGRect(x: 0,
-                      y: 0,
+        return CGRect(x: -platformWidth / 2,
+                      y: -kPlatformHeight / 2,
                       width: platformWidth,
                       height: kPlatformHeight)
     }
