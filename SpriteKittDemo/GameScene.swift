@@ -13,9 +13,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     //allow double jump
     private let kJumps = 2
-    private let kCityScrollingVelocity: CGFloat = 20.0 / 2
-    private let kMountainsVelocity: CGFloat = 5.0 / 2
-    private let kCloudsVelocity: CGFloat = 2.0 / 2
+    private let kCityScrollingVelocity: CGFloat = 20.0 / 4
+    private let kMountainsVelocity: CGFloat = 5.0 / 4
+    private let kCloudsVelocity: CGFloat = 2.0 / 4
 
     private let kPlayerCategory: UInt32 = 1
     private let kIceCategory: UInt32 = 2
@@ -26,6 +26,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var scrollingCityBackground: ScrollingBackground?
     private var scrollingMountainsBackground: ScrollingBackground?
     private var scrollingCloudsBackground: ScrollingBackground?
+
+    private var platformsGenerator: PlatformsGenerator?
+    private var platformsNode: SKSpriteNode?
 
     private var jumps = 0
     
@@ -60,13 +63,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             ice.physicsBody?.categoryBitMask = kIceCategory
             ice.physicsBody?.contactTestBitMask = kPlayerCategory
         }
+
+        platformsGenerator = PlatformsGenerator()
+        platformsNode = platformsGenerator?.configurePlatformsNode(size: self.size)
+
+        if let platformsNode = self.platformsNode {
+            addChild(platformsNode)
+            platformsNode.position = self.position
+            platformsNode.zPosition = 2
+        }
     }
 
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
         scrollingCityBackground?.update(currentTime: currentTime)
         scrollingMountainsBackground?.update(currentTime: currentTime)
         scrollingCloudsBackground?.update(currentTime: currentTime)
+
+        platformsGenerator?.updatePlatform(velocity: kCityScrollingVelocity)
     }
 
     //MARK: - Private methods
