@@ -56,7 +56,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if let player = self.player {
             player.physicsBody?.categoryBitMask = kPlayerCategory
             player.physicsBody?.contactTestBitMask = kIceCategory
-            player.playRunAnimation()
+            player.run()
         }
 
         ice = childNode(withName: "ice") as? SKSpriteNode
@@ -106,6 +106,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     func didBegin(_ contact: SKPhysicsContact) {
         player?.inAir = false
+        player?.run()
         jumps = 0
 
         //coins
@@ -120,6 +121,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if jumps < kJumps {
+            player?.jump()
             jumps += 1
             player?.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 200.0)) //impulse vs force?
         }
