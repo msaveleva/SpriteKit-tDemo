@@ -11,6 +11,7 @@
 		CF4C2B821E0D92C100345EEB /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4C2B811E0D92C100345EEB /* Player.swift */; };
 		CF5647A61E12D5E100585936 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A51E12D5E100585936 /* Platform.swift */; };
 		CF5647A81E12D60F00585936 /* PlatformsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A71E12D60F00585936 /* PlatformsGenerator.swift */; };
+		CF5647AA1E16C3D800585936 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A91E16C3D800585936 /* Coin.swift */; };
 		CF827FE81E0FB8B900831117 /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF827FE71E0FB8B900831117 /* ScrollingBackground.swift */; };
 		CFA96E3D1E0AE4AA00275AB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA96E3C1E0AE4AA00275AB5 /* AppDelegate.swift */; };
 		CFA96E3F1E0AE4AA00275AB5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E3E1E0AE4AA00275AB5 /* GameScene.sks */; };
@@ -27,6 +28,7 @@
 		CF4C2B811E0D92C100345EEB /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		CF5647A51E12D5E100585936 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		CF5647A71E12D60F00585936 /* PlatformsGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformsGenerator.swift; sourceTree = "<group>"; };
+		CF5647A91E16C3D800585936 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		CF827FE71E0FB8B900831117 /* ScrollingBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingBackground.swift; sourceTree = "<group>"; };
 		CFA96E391E0AE4AA00275AB5 /* SpriteKittDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKittDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA96E3C1E0AE4AA00275AB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				CF4C2B811E0D92C100345EEB /* Player.swift */,
 				CF827FE71E0FB8B900831117 /* ScrollingBackground.swift */,
 				CF5647A51E12D5E100585936 /* Platform.swift */,
+				CF5647A91E16C3D800585936 /* Coin.swift */,
 			);
 			name = VisualNodes;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5647AA1E16C3D800585936 /* Coin.swift in Sources */,
 				CF5647A61E12D5E100585936 /* Platform.swift in Sources */,
 				CFA96E431E0AE4AA00275AB5 /* GameScene.swift in Sources */,
 				CF5647A81E12D60F00585936 /* PlatformsGenerator.swift in Sources */,

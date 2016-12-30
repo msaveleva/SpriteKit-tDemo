@@ -107,6 +107,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         player?.inAir = false
         jumps = 0
+
+        //coins
+        if contact.bodyB.node is Coin {
+            if let coin = contact.bodyB.node as? Coin {
+                coin.collected()
+            }
+        }
     }
 
     //MARK: - Touch methods
