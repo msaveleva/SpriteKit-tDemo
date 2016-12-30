@@ -29,7 +29,7 @@ class Platform: SKSpriteNode {
     private func generateCoins() {
         var coins = [Coin]()
 
-        let numberOfCoins = Int(self.frame.width / (kCoinWidthHeight + kCoinMargin)) - 2
+        let numberOfCoins = Int(self.frame.width / (kCoinWidthHeight + kCoinMargin)) - 1
 
         if numberOfCoins < 0 {
             return
@@ -38,12 +38,7 @@ class Platform: SKSpriteNode {
         for _ in 0...numberOfCoins {
             let coin = Coin(imageNamed: "Coin")
             coin.size = CGSize(width: kCoinWidthHeight, height: kCoinWidthHeight)
-
-            coin.physicsBody = SKPhysicsBody(rectangleOf: coin.frame.size)
-            coin.physicsBody?.isDynamic = false
-            coin.physicsBody?.categoryBitMask = kIceCategory
-            coin.physicsBody?.collisionBitMask = 0
-            coin.physicsBody?.contactTestBitMask = kPlayerCategory
+            coin.configure()
 
             coins.append(coin)
 

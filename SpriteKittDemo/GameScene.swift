@@ -110,7 +110,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         //coins
         if contact.bodyB.node is Coin {
-            contact.bodyB.node?.removeFromParent()
+            if let coin = contact.bodyB.node as? Coin {
+                coin.collected()
+            }
         }
     }
 
