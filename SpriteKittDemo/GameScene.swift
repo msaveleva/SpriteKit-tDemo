@@ -17,9 +17,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private let kMountainsVelocity: CGFloat = 5.0 / 4
     private let kCloudsVelocity: CGFloat = 2.0 / 4
 
-    private let kPlayerCategory: UInt32 = 1
-    private let kIceCategory: UInt32 = 2
-
     private var skyGradient: SKSpriteNode?
     private var player: Player?
     private var ice: SKSpriteNode?

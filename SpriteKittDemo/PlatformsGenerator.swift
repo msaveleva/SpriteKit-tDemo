@@ -12,7 +12,6 @@ import GameplayKit
 
 class PlatformsGenerator {
 
-    private let kPlatformHeight: CGFloat = 60.0
     private let kMaxPlatformsOnScreen = 5
     private let kMinSpace: Int = 120
 

@@ -10,10 +10,7 @@ import Foundation
 import SpriteKit
 
 class Platform: SKSpriteNode {
-
-    private let kPlayerCategory: UInt32 = 1
-    private let kIceCategory: UInt32 = 2
-    private let kCoinWidthHeight: CGFloat = 120
+    
     private let kCoinMargin: CGFloat = 0
 
     public func configure() {
