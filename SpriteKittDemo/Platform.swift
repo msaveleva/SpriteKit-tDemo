@@ -15,8 +15,7 @@ class Platform: SKSpriteNode {
     private let kIceCategory: UInt32 = 2
 
     public func configure() {
-        let squareValue = 1076 - 160
-        centerRect = CGRect(x: 80/1076, y: 80/1076, width: squareValue/1076, height: squareValue/1076)
+        centerRect = CGRect(x: 60.0/180.0, y: 60.0/180.0, width: 4.0/180.0, height: 4.0/180.0)
 
         physicsBody = SKPhysicsBody(rectangleOf: frame.size)
         physicsBody?.isDynamic = false

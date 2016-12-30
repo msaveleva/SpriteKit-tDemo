@@ -62,8 +62,8 @@ class PlatformsGenerator {
     private func createPlatform() -> Platform? {
         let randomSize = calculateRandomPlatformSize()
 
-        let platform = Platform(imageNamed: "Platform")
-        platform.size = randomSize
+        let texture = SKTexture(imageNamed: "Platform")
+        let platform = Platform(texture: texture, size: randomSize)
         platform.configure()
 
         return platform
