@@ -23,6 +23,7 @@
 		CFA96E4D1E0AE4AA00275AB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E4B1E0AE4AA00275AB5 /* LaunchScreen.storyboard */; };
 		CFADE0B41E16E64F0071FBD7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFADE0B31E16E64F0071FBD7 /* Constants.swift */; };
 		CFADE0B61E1777ED0071FBD7 /* CoinsCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFADE0B51E1777ED0071FBD7 /* CoinsCounter.swift */; };
+		CFADE0B81E177EBE0071FBD7 /* Molle.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFADE0B71E177EBE0071FBD7 /* Molle.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		CFA96E4E1E0AE4AA00275AB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFADE0B31E16E64F0071FBD7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CFADE0B51E1777ED0071FBD7 /* CoinsCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinsCounter.swift; sourceTree = "<group>"; };
+		CFADE0B71E177EBE0071FBD7 /* Molle.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Molle.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				CF0B670B1E0B03C500C44F14 /* Storyboards */,
 				CF0B670D1E0B03FD00C44F14 /* SupportingFiles */,
 				CFA96E3C1E0AE4AA00275AB5 /* AppDelegate.swift */,
+				CFADE0B71E177EBE0071FBD7 /* Molle.ttf */,
 			);
 			path = SpriteKittDemo;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFA96E481E0AE4AA00275AB5 /* Main.storyboard in Resources */,
+				CFADE0B81E177EBE0071FBD7 /* Molle.ttf in Resources */,
 				CFA96E3F1E0AE4AA00275AB5 /* GameScene.sks in Resources */,
 				CFA96E4A1E0AE4AA00275AB5 /* Assets.xcassets in Resources */,
 				CFA96E4D1E0AE4AA00275AB5 /* LaunchScreen.storyboard in Resources */,
