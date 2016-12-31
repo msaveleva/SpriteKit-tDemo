@@ -9,6 +9,10 @@
 import SpriteKit
 import GameplayKit
 
+#if os(macOS)
+import AppKit
+#endif
+
 class GameScene: SKScene, SKPhysicsContactDelegate {
 
     //allow double jump
@@ -129,6 +133,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         return CGPoint(x: x, y: y)
     }
 
+    private func userInteraction() {
+        if jumps < kJumps {
+            player?.jump()
+            jumps += 1
+            player?.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 200.0)) //impulse vs force?
+        }
+    }
+
     //MARK: - SKPhysicsContactDelegate methods
 
     func didBegin(_ contact: SKPhysicsContact) {
@@ -145,23 +157,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
 
+    #if os(iOS)
     //MARK: - Touch methods
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if jumps < kJumps {
-            player?.jump()
-            jumps += 1
-            player?.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 200.0)) //impulse vs force?
-        }
+        userInteraction()
     }
-    
+
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
     }
-    
+
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     }
-    
+
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
     }
+
+    #elseif os(macOS)
+
+    override func keyDown(with event: NSEvent) {
+        super.keyDown(with: event)
+        if event.keyCode == 49 { //space bar keyCode
+            userInteraction()
+        }
+    }
+
+    #endif
 
 }
