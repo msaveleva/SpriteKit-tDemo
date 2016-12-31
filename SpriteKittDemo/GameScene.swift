@@ -25,6 +25,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var scrollingMountainsBackground: ScrollingBackground?
     private var scrollingCloudsBackground: ScrollingBackground?
 
+    //UI
+    private var coinsCounter: CoinsCounter?
+
     private var platformsGenerator: PlatformsGenerator?
     private var platformsNode: SKSpriteNode?
 
@@ -71,6 +74,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             addChild(platformsNode)
             platformsNode.position = self.position
             platformsNode.zPosition = 2
+        }
+
+        coinsCounter = childNode(withName: "CoinsCounter") as? CoinsCounter
+        if let coinsCounter = self.coinsCounter {
+            coinsCounter.configure()
         }
     }
 
@@ -131,6 +139,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //coins
         if contact.bodyB.node is Coin {
             if let coin = contact.bodyB.node as? Coin {
+                coinsCounter?.increaseCounter()
                 coin.collected()
             }
         }

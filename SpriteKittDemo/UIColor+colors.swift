@@ -23,6 +23,10 @@ extension UIColor {
         return UIColor().hexStringToUIColor(hex: "#007ea7")
     }
 
+    class func coinsTextColor() -> UIColor {
+        return UIColor().hexStringToUIColor(hex: "#fcd734")
+    }
+
     private func hexStringToUIColor(hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         cString.remove(at: cString.startIndex)
