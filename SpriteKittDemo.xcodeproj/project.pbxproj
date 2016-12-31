@@ -22,6 +22,7 @@
 		CFA96E4A1E0AE4AA00275AB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E491E0AE4AA00275AB5 /* Assets.xcassets */; };
 		CFA96E4D1E0AE4AA00275AB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E4B1E0AE4AA00275AB5 /* LaunchScreen.storyboard */; };
 		CFADE0B41E16E64F0071FBD7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFADE0B31E16E64F0071FBD7 /* Constants.swift */; };
+		CFADE0B61E1777ED0071FBD7 /* CoinsCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFADE0B51E1777ED0071FBD7 /* CoinsCounter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		CFA96E4C1E0AE4AA00275AB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFA96E4E1E0AE4AA00275AB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFADE0B31E16E64F0071FBD7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CFADE0B51E1777ED0071FBD7 /* CoinsCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinsCounter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				CF827FE71E0FB8B900831117 /* ScrollingBackground.swift */,
 				CF5647A51E12D5E100585936 /* Platform.swift */,
 				CF5647A91E16C3D800585936 /* Coin.swift */,
+				CFADE0B51E1777ED0071FBD7 /* CoinsCounter.swift */,
 			);
 			name = VisualNodes;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				CF827FE81E0FB8B900831117 /* ScrollingBackground.swift in Sources */,
 				CF4C2B821E0D92C100345EEB /* Player.swift in Sources */,
 				CFA96E3D1E0AE4AA00275AB5 /* AppDelegate.swift in Sources */,
+				CFADE0B61E1777ED0071FBD7 /* CoinsCounter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
