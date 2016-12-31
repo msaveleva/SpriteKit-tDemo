@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF02E6CC1E1781E20009F98E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF02E6CA1E1781E20009F98E /* Main.storyboard */; };
+		CF02E6DE1E17825C0009F98E /* PlatformsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A71E12D60F00585936 /* PlatformsGenerator.swift */; };
+		CF02E6DF1E17825C0009F98E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4C2B811E0D92C100345EEB /* Player.swift */; };
+		CF02E6E11E17825C0009F98E /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A51E12D5E100585936 /* Platform.swift */; };
+		CF02E6E21E17825C0009F98E /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A91E16C3D800585936 /* Coin.swift */; };
+		CF02E6ED1E1782950009F98E /* Molle.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFADE0B71E177EBE0071FBD7 /* Molle.ttf */; };
+		CF02E6EF1E1783090009F98E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02E6EE1E1783090009F98E /* Constants.swift */; };
+		CF02E6F11E1783470009F98E /* NSColor+colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02E6F01E1783470009F98E /* NSColor+colors.swift */; };
+		CF02E6F31E1783980009F98E /* CoinsCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02E6F21E1783980009F98E /* CoinsCounter.swift */; };
+		CF4C2B7F1E0D8DBC00345EEB /* UIColor+colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4C2B7E1E0D8DBC00345EEB /* UIColor+colors.swift */; };
+		CF4C2B821E0D92C100345EEB /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4C2B811E0D92C100345EEB /* Player.swift */; };
+		CF5647A61E12D5E100585936 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A51E12D5E100585936 /* Platform.swift */; };
+		CF5647A81E12D60F00585936 /* PlatformsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A71E12D60F00585936 /* PlatformsGenerator.swift */; };
+		CF5647AA1E16C3D800585936 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A91E16C3D800585936 /* Coin.swift */; };
 		CFA96E3D1E0AE4AA00275AB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA96E3C1E0AE4AA00275AB5 /* AppDelegate.swift */; };
 		CFA96E3F1E0AE4AA00275AB5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E3E1E0AE4AA00275AB5 /* GameScene.sks */; };
 		CFA96E411E0AE4AA00275AB5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E401E0AE4AA00275AB5 /* Actions.sks */; };
@@ -15,9 +29,33 @@
 		CFA96E481E0AE4AA00275AB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E461E0AE4AA00275AB5 /* Main.storyboard */; };
 		CFA96E4A1E0AE4AA00275AB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E491E0AE4AA00275AB5 /* Assets.xcassets */; };
 		CFA96E4D1E0AE4AA00275AB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E4B1E0AE4AA00275AB5 /* LaunchScreen.storyboard */; };
+		CFADE0B41E16E64F0071FBD7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFADE0B31E16E64F0071FBD7 /* Constants.swift */; };
+		CFADE0B61E1777ED0071FBD7 /* CoinsCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFADE0B51E1777ED0071FBD7 /* CoinsCounter.swift */; };
+		CFADE0B81E177EBE0071FBD7 /* Molle.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFADE0B71E177EBE0071FBD7 /* Molle.ttf */; };
+		CFD18CFB1E17860800A395B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02E6BE1E1781E20009F98E /* AppDelegate.swift */; };
+		CFD18CFC1E17861200A395B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02E6C61E1781E20009F98E /* ViewController.swift */; };
+		CFD18CFD1E17868E00A395B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E491E0AE4AA00275AB5 /* Assets.xcassets */; };
+		CFD18D051E178D3F00A395B8 /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF827FE71E0FB8B900831117 /* ScrollingBackground.swift */; };
+		CFD18D081E17921A00A395B8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA96E421E0AE4AA00275AB5 /* GameScene.swift */; };
+		CFD18D091E17928700A395B8 /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF827FE71E0FB8B900831117 /* ScrollingBackground.swift */; };
+		CFD18D0B1E1794C100A395B8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFD18D0A1E1794C100A395B8 /* GameScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF02E6BC1E1781E20009F98E /* Mary's Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mary's Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF02E6BE1E1781E20009F98E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF02E6C61E1781E20009F98E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF02E6CB1E1781E20009F98E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF02E6CD1E1781E20009F98E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF02E6EE1E1783090009F98E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CF02E6F01E1783470009F98E /* NSColor+colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+colors.swift"; sourceTree = "<group>"; };
+		CF02E6F21E1783980009F98E /* CoinsCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinsCounter.swift; sourceTree = "<group>"; };
+		CF4C2B7E1E0D8DBC00345EEB /* UIColor+colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+colors.swift"; sourceTree = "<group>"; };
+		CF4C2B811E0D92C100345EEB /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CF5647A51E12D5E100585936 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		CF5647A71E12D60F00585936 /* PlatformsGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformsGenerator.swift; sourceTree = "<group>"; };
+		CF5647A91E16C3D800585936 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		CF827FE71E0FB8B900831117 /* ScrollingBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingBackground.swift; sourceTree = "<group>"; };
 		CFA96E391E0AE4AA00275AB5 /* SpriteKittDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKittDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA96E3C1E0AE4AA00275AB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFA96E3E1E0AE4AA00275AB5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -28,9 +66,20 @@
 		CFA96E491E0AE4AA00275AB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFA96E4C1E0AE4AA00275AB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFA96E4E1E0AE4AA00275AB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFADE0B31E16E64F0071FBD7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CFADE0B51E1777ED0071FBD7 /* CoinsCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinsCounter.swift; sourceTree = "<group>"; };
+		CFADE0B71E177EBE0071FBD7 /* Molle.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Molle.ttf; sourceTree = "<group>"; };
+		CFD18D0A1E1794C100A395B8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CF02E6B91E1781E20009F98E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CFA96E361E0AE4AA00275AB5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,10 +90,106 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF02E6BD1E1781E20009F98E /* Mary's Adventure */ = {
+			isa = PBXGroup;
+			children = (
+				CFD18D0A1E1794C100A395B8 /* GameScene.sks */,
+				CF02E6BE1E1781E20009F98E /* AppDelegate.swift */,
+				CF02E6C61E1781E20009F98E /* ViewController.swift */,
+				CF02E6CA1E1781E20009F98E /* Main.storyboard */,
+				CF02E6CD1E1781E20009F98E /* Info.plist */,
+				CF02E6EE1E1783090009F98E /* Constants.swift */,
+				CF02E6F01E1783470009F98E /* NSColor+colors.swift */,
+				CF02E6F21E1783980009F98E /* CoinsCounter.swift */,
+			);
+			path = "Mary's Adventure";
+			sourceTree = "<group>";
+		};
+		CF0B67061E0B026600C44F14 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CFA96E3E1E0AE4AA00275AB5 /* GameScene.sks */,
+				CFA96E421E0AE4AA00275AB5 /* GameScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		CF0B67071E0B026E00C44F14 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CFADE0B31E16E64F0071FBD7 /* Constants.swift */,
+				CF5647A71E12D60F00585936 /* PlatformsGenerator.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		CF0B67081E0B027500C44F14 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CFA96E441E0AE4AA00275AB5 /* GameViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CF0B67091E0B03A400C44F14 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CFA96E491E0AE4AA00275AB5 /* Assets.xcassets */,
+				CF0B670A1E0B03A900C44F14 /* Sound */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		CF0B670A1E0B03A900C44F14 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
+		CF0B670B1E0B03C500C44F14 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CFA96E461E0AE4AA00275AB5 /* Main.storyboard */,
+				CFA96E4B1E0AE4AA00275AB5 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		CF0B670D1E0B03FD00C44F14 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CFA96E401E0AE4AA00275AB5 /* Actions.sks */,
+				CFA96E4E1E0AE4AA00275AB5 /* Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		CF4C2B7D1E0D8DAB00345EEB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CF4C2B7E1E0D8DBC00345EEB /* UIColor+colors.swift */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		CF4C2B801E0D929C00345EEB /* VisualNodes */ = {
+			isa = PBXGroup;
+			children = (
+				CF4C2B811E0D92C100345EEB /* Player.swift */,
+				CF827FE71E0FB8B900831117 /* ScrollingBackground.swift */,
+				CF5647A51E12D5E100585936 /* Platform.swift */,
+				CF5647A91E16C3D800585936 /* Coin.swift */,
+				CFADE0B51E1777ED0071FBD7 /* CoinsCounter.swift */,
+			);
+			name = VisualNodes;
+			sourceTree = "<group>";
+		};
 		CFA96E301E0AE4AA00275AB5 = {
 			isa = PBXGroup;
 			children = (
 				CFA96E3B1E0AE4AA00275AB5 /* SpriteKittDemo */,
+				CF02E6BD1E1781E20009F98E /* Mary's Adventure */,
 				CFA96E3A1E0AE4AA00275AB5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				CFA96E391E0AE4AA00275AB5 /* SpriteKittDemo.app */,
+				CF02E6BC1E1781E20009F98E /* Mary's Adventure.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,15 +206,16 @@
 		CFA96E3B1E0AE4AA00275AB5 /* SpriteKittDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CF4C2B7D1E0D8DAB00345EEB /* Categories */,
+				CF0B67091E0B03A400C44F14 /* Assets */,
+				CF0B67081E0B027500C44F14 /* Controllers */,
+				CF0B67071E0B026E00C44F14 /* Helpers */,
+				CF4C2B801E0D929C00345EEB /* VisualNodes */,
+				CF0B67061E0B026600C44F14 /* Scenes */,
+				CF0B670B1E0B03C500C44F14 /* Storyboards */,
+				CF0B670D1E0B03FD00C44F14 /* SupportingFiles */,
 				CFA96E3C1E0AE4AA00275AB5 /* AppDelegate.swift */,
-				CFA96E3E1E0AE4AA00275AB5 /* GameScene.sks */,
-				CFA96E401E0AE4AA00275AB5 /* Actions.sks */,
-				CFA96E421E0AE4AA00275AB5 /* GameScene.swift */,
-				CFA96E441E0AE4AA00275AB5 /* GameViewController.swift */,
-				CFA96E461E0AE4AA00275AB5 /* Main.storyboard */,
-				CFA96E491E0AE4AA00275AB5 /* Assets.xcassets */,
-				CFA96E4B1E0AE4AA00275AB5 /* LaunchScreen.storyboard */,
-				CFA96E4E1E0AE4AA00275AB5 /* Info.plist */,
+				CFADE0B71E177EBE0071FBD7 /* Molle.ttf */,
 			);
 			path = SpriteKittDemo;
 			sourceTree = "<group>";
@@ -76,6 +223,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CF02E6BB1E1781E20009F98E /* Mary's Adventure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF02E6D01E1781E20009F98E /* Build configuration list for PBXNativeTarget "Mary's Adventure" */;
+			buildPhases = (
+				CF02E6B81E1781E20009F98E /* Sources */,
+				CF02E6B91E1781E20009F98E /* Frameworks */,
+				CF02E6BA1E1781E20009F98E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mary's Adventure";
+			productName = "Mary's Adventure";
+			productReference = CF02E6BC1E1781E20009F98E /* Mary's Adventure.app */;
+			productType = "com.apple.product-type.application";
+		};
 		CFA96E381E0AE4AA00275AB5 /* SpriteKittDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFA96E511E0AE4AA00275AB5 /* Build configuration list for PBXNativeTarget "SpriteKittDemo" */;
@@ -99,10 +263,15 @@
 		CFA96E311E0AE4AA00275AB5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = MariaSaveleva;
 				TargetAttributes = {
+					CF02E6BB1E1781E20009F98E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 37QQLS7AS9;
+						ProvisioningStyle = Automatic;
+					};
 					CFA96E381E0AE4AA00275AB5 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 37QQLS7AS9;
@@ -124,16 +293,29 @@
 			projectRoot = "";
 			targets = (
 				CFA96E381E0AE4AA00275AB5 /* SpriteKittDemo */,
+				CF02E6BB1E1781E20009F98E /* Mary's Adventure */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CF02E6BA1E1781E20009F98E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD18D0B1E1794C100A395B8 /* GameScene.sks in Resources */,
+				CF02E6ED1E1782950009F98E /* Molle.ttf in Resources */,
+				CF02E6CC1E1781E20009F98E /* Main.storyboard in Resources */,
+				CFD18CFD1E17868E00A395B8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CFA96E371E0AE4AA00275AB5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CFA96E481E0AE4AA00275AB5 /* Main.storyboard in Resources */,
+				CFADE0B81E177EBE0071FBD7 /* Molle.ttf in Resources */,
 				CFA96E3F1E0AE4AA00275AB5 /* GameScene.sks in Resources */,
 				CFA96E4A1E0AE4AA00275AB5 /* Assets.xcassets in Resources */,
 				CFA96E4D1E0AE4AA00275AB5 /* LaunchScreen.storyboard in Resources */,
@@ -144,19 +326,53 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CF02E6B81E1781E20009F98E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD18D081E17921A00A395B8 /* GameScene.swift in Sources */,
+				CFD18CFB1E17860800A395B8 /* AppDelegate.swift in Sources */,
+				CF02E6F11E1783470009F98E /* NSColor+colors.swift in Sources */,
+				CFD18D091E17928700A395B8 /* ScrollingBackground.swift in Sources */,
+				CF02E6DE1E17825C0009F98E /* PlatformsGenerator.swift in Sources */,
+				CFD18CFC1E17861200A395B8 /* ViewController.swift in Sources */,
+				CF02E6F31E1783980009F98E /* CoinsCounter.swift in Sources */,
+				CF02E6DF1E17825C0009F98E /* Player.swift in Sources */,
+				CF02E6E11E17825C0009F98E /* Platform.swift in Sources */,
+				CF02E6E21E17825C0009F98E /* Coin.swift in Sources */,
+				CF02E6EF1E1783090009F98E /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CFA96E351E0AE4AA00275AB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5647AA1E16C3D800585936 /* Coin.swift in Sources */,
+				CF5647A61E12D5E100585936 /* Platform.swift in Sources */,
 				CFA96E431E0AE4AA00275AB5 /* GameScene.swift in Sources */,
+				CFD18D051E178D3F00A395B8 /* ScrollingBackground.swift in Sources */,
+				CF5647A81E12D60F00585936 /* PlatformsGenerator.swift in Sources */,
+				CF4C2B7F1E0D8DBC00345EEB /* UIColor+colors.swift in Sources */,
+				CFADE0B41E16E64F0071FBD7 /* Constants.swift in Sources */,
 				CFA96E451E0AE4AA00275AB5 /* GameViewController.swift in Sources */,
+				CF4C2B821E0D92C100345EEB /* Player.swift in Sources */,
 				CFA96E3D1E0AE4AA00275AB5 /* AppDelegate.swift in Sources */,
+				CFADE0B61E1777ED0071FBD7 /* CoinsCounter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		CF02E6CA1E1781E20009F98E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF02E6CB1E1781E20009F98E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		CFA96E461E0AE4AA00275AB5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -176,6 +392,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CF02E6CE1E1781E20009F98E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 37QQLS7AS9;
+				INFOPLIST_FILE = "Mary's Adventure/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "pandadevel.Mary-s-Adventure";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CF02E6CF1E1781E20009F98E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 37QQLS7AS9;
+				INFOPLIST_FILE = "Mary's Adventure/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "pandadevel.Mary-s-Adventure";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		CFA96E4F1E0AE4AA00275AB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -298,6 +550,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CF02E6D01E1781E20009F98E /* Build configuration list for PBXNativeTarget "Mary's Adventure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF02E6CE1E1781E20009F98E /* Debug */,
+				CF02E6CF1E1781E20009F98E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CFA96E341E0AE4AA00275AB5 /* Build configuration list for PBXProject "SpriteKittDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -314,6 +575,7 @@
 				CFA96E531E0AE4AA00275AB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
