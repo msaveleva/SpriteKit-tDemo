@@ -36,9 +36,9 @@
 		CFD18CFC1E17861200A395B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02E6C61E1781E20009F98E /* ViewController.swift */; };
 		CFD18CFD1E17868E00A395B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E491E0AE4AA00275AB5 /* Assets.xcassets */; };
 		CFD18D051E178D3F00A395B8 /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF827FE71E0FB8B900831117 /* ScrollingBackground.swift */; };
-		CFD18D071E178D8100A395B8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E3E1E0AE4AA00275AB5 /* GameScene.sks */; };
 		CFD18D081E17921A00A395B8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA96E421E0AE4AA00275AB5 /* GameScene.swift */; };
 		CFD18D091E17928700A395B8 /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF827FE71E0FB8B900831117 /* ScrollingBackground.swift */; };
+		CFD18D0B1E1794C100A395B8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFD18D0A1E1794C100A395B8 /* GameScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +69,7 @@
 		CFADE0B31E16E64F0071FBD7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CFADE0B51E1777ED0071FBD7 /* CoinsCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinsCounter.swift; sourceTree = "<group>"; };
 		CFADE0B71E177EBE0071FBD7 /* Molle.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Molle.ttf; sourceTree = "<group>"; };
+		CFD18D0A1E1794C100A395B8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		CF02E6BD1E1781E20009F98E /* Mary's Adventure */ = {
 			isa = PBXGroup;
 			children = (
+				CFD18D0A1E1794C100A395B8 /* GameScene.sks */,
 				CF02E6BE1E1781E20009F98E /* AppDelegate.swift */,
 				CF02E6C61E1781E20009F98E /* ViewController.swift */,
 				CF02E6CA1E1781E20009F98E /* Main.storyboard */,
@@ -301,7 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFD18D071E178D8100A395B8 /* GameScene.sks in Resources */,
+				CFD18D0B1E1794C100A395B8 /* GameScene.sks in Resources */,
 				CF02E6ED1E1782950009F98E /* Molle.ttf in Resources */,
 				CF02E6CC1E1781E20009F98E /* Main.storyboard in Resources */,
 				CFD18CFD1E17868E00A395B8 /* Assets.xcassets in Resources */,
