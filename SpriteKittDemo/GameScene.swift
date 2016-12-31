@@ -16,6 +16,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private let kCityScrollingVelocity: CGFloat = 20.0 / 4
     private let kMountainsVelocity: CGFloat = 5.0 / 4
     private let kCloudsVelocity: CGFloat = 2.0 / 4
+    private var playerStartPoint = CGPoint.zero
 
     private var skyGradient: SKSpriteNode?
     private var player: Player?
@@ -55,6 +56,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             player.physicsBody?.contactTestBitMask = kIceCategory
             player.run()
         }
+        playerStartPoint = calculatePlayerStartPoint()
 
         ice = childNode(withName: "ice") as? SKSpriteNode
         if let ice = self.ice {
@@ -78,6 +80,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scrollingCloudsBackground?.update(currentTime: currentTime)
 
         platformsGenerator?.updatePlatform(velocity: kCityScrollingVelocity)
+
+        checkPlayerPosition()
     }
 
     //MARK: - Private methods
@@ -97,6 +101,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scrollingCloudsBackground?.velocity = kCloudsVelocity
         scrollingCloudsBackground?.backgroundImagesNames = ["clouds01", "clouds02", "clouds03", "clouds04", "clouds05", "clouds06", "clouds07", "clouds08"]
         scrollingCloudsBackground?.configureScrollingBackground()
+    }
+
+    private func checkPlayerPosition() {
+        guard let player = self.player else { return }
+
+        //Don't allow player to hide on left side
+        if player.position.x < -frame.width / 2 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                player.position = self.playerStartPoint
+            })
+        }
+    }
+
+    private func calculatePlayerStartPoint() -> CGPoint {
+        let x = -frame.width / 2 + frame.width/4
+        let y = frame.height / 2 + frame.height/4
+
+        return CGPoint(x: x, y: y)
     }
 
     //MARK: - SKPhysicsContactDelegate methods
