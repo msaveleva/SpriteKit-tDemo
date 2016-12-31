@@ -10,10 +10,8 @@
 		CF02E6CC1E1781E20009F98E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF02E6CA1E1781E20009F98E /* Main.storyboard */; };
 		CF02E6DE1E17825C0009F98E /* PlatformsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A71E12D60F00585936 /* PlatformsGenerator.swift */; };
 		CF02E6DF1E17825C0009F98E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4C2B811E0D92C100345EEB /* Player.swift */; };
-		CF02E6E01E17825C0009F98E /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF827FE71E0FB8B900831117 /* ScrollingBackground.swift */; };
 		CF02E6E11E17825C0009F98E /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A51E12D5E100585936 /* Platform.swift */; };
 		CF02E6E21E17825C0009F98E /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A91E16C3D800585936 /* Coin.swift */; };
-		CF02E6E91E1782820009F98E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E3E1E0AE4AA00275AB5 /* GameScene.sks */; };
 		CF02E6ED1E1782950009F98E /* Molle.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFADE0B71E177EBE0071FBD7 /* Molle.ttf */; };
 		CF02E6EF1E1783090009F98E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02E6EE1E1783090009F98E /* Constants.swift */; };
 		CF02E6F11E1783470009F98E /* NSColor+colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02E6F01E1783470009F98E /* NSColor+colors.swift */; };
@@ -23,7 +21,6 @@
 		CF5647A61E12D5E100585936 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A51E12D5E100585936 /* Platform.swift */; };
 		CF5647A81E12D60F00585936 /* PlatformsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A71E12D60F00585936 /* PlatformsGenerator.swift */; };
 		CF5647AA1E16C3D800585936 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A91E16C3D800585936 /* Coin.swift */; };
-		CF827FE81E0FB8B900831117 /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF827FE71E0FB8B900831117 /* ScrollingBackground.swift */; };
 		CFA96E3D1E0AE4AA00275AB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA96E3C1E0AE4AA00275AB5 /* AppDelegate.swift */; };
 		CFA96E3F1E0AE4AA00275AB5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E3E1E0AE4AA00275AB5 /* GameScene.sks */; };
 		CFA96E411E0AE4AA00275AB5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E401E0AE4AA00275AB5 /* Actions.sks */; };
@@ -38,7 +35,10 @@
 		CFD18CFB1E17860800A395B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02E6BE1E1781E20009F98E /* AppDelegate.swift */; };
 		CFD18CFC1E17861200A395B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02E6C61E1781E20009F98E /* ViewController.swift */; };
 		CFD18CFD1E17868E00A395B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E491E0AE4AA00275AB5 /* Assets.xcassets */; };
-		CFD18D001E178A1700A395B8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD18CF91E17858200A395B8 /* GameScene.swift */; };
+		CFD18D051E178D3F00A395B8 /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF827FE71E0FB8B900831117 /* ScrollingBackground.swift */; };
+		CFD18D071E178D8100A395B8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFA96E3E1E0AE4AA00275AB5 /* GameScene.sks */; };
+		CFD18D081E17921A00A395B8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA96E421E0AE4AA00275AB5 /* GameScene.swift */; };
+		CFD18D091E17928700A395B8 /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF827FE71E0FB8B900831117 /* ScrollingBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,7 +69,6 @@
 		CFADE0B31E16E64F0071FBD7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CFADE0B51E1777ED0071FBD7 /* CoinsCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinsCounter.swift; sourceTree = "<group>"; };
 		CFADE0B71E177EBE0071FBD7 /* Molle.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Molle.ttf; sourceTree = "<group>"; };
-		CFD18CF91E17858200A395B8 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +99,6 @@
 				CF02E6EE1E1783090009F98E /* Constants.swift */,
 				CF02E6F01E1783470009F98E /* NSColor+colors.swift */,
 				CF02E6F21E1783980009F98E /* CoinsCounter.swift */,
-				CFD18CF91E17858200A395B8 /* GameScene.swift */,
 			);
 			path = "Mary's Adventure";
 			sourceTree = "<group>";
@@ -303,9 +301,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFD18D071E178D8100A395B8 /* GameScene.sks in Resources */,
 				CF02E6ED1E1782950009F98E /* Molle.ttf in Resources */,
 				CF02E6CC1E1781E20009F98E /* Main.storyboard in Resources */,
-				CF02E6E91E1782820009F98E /* GameScene.sks in Resources */,
 				CFD18CFD1E17868E00A395B8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,14 +328,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFD18D081E17921A00A395B8 /* GameScene.swift in Sources */,
 				CFD18CFB1E17860800A395B8 /* AppDelegate.swift in Sources */,
 				CF02E6F11E1783470009F98E /* NSColor+colors.swift in Sources */,
+				CFD18D091E17928700A395B8 /* ScrollingBackground.swift in Sources */,
 				CF02E6DE1E17825C0009F98E /* PlatformsGenerator.swift in Sources */,
 				CFD18CFC1E17861200A395B8 /* ViewController.swift in Sources */,
 				CF02E6F31E1783980009F98E /* CoinsCounter.swift in Sources */,
-				CFD18D001E178A1700A395B8 /* GameScene.swift in Sources */,
 				CF02E6DF1E17825C0009F98E /* Player.swift in Sources */,
-				CF02E6E01E17825C0009F98E /* ScrollingBackground.swift in Sources */,
 				CF02E6E11E17825C0009F98E /* Platform.swift in Sources */,
 				CF02E6E21E17825C0009F98E /* Coin.swift in Sources */,
 				CF02E6EF1E1783090009F98E /* Constants.swift in Sources */,
@@ -351,11 +349,11 @@
 				CF5647AA1E16C3D800585936 /* Coin.swift in Sources */,
 				CF5647A61E12D5E100585936 /* Platform.swift in Sources */,
 				CFA96E431E0AE4AA00275AB5 /* GameScene.swift in Sources */,
+				CFD18D051E178D3F00A395B8 /* ScrollingBackground.swift in Sources */,
 				CF5647A81E12D60F00585936 /* PlatformsGenerator.swift in Sources */,
 				CF4C2B7F1E0D8DBC00345EEB /* UIColor+colors.swift in Sources */,
 				CFADE0B41E16E64F0071FBD7 /* Constants.swift in Sources */,
 				CFA96E451E0AE4AA00275AB5 /* GameViewController.swift in Sources */,
-				CF827FE81E0FB8B900831117 /* ScrollingBackground.swift in Sources */,
 				CF4C2B821E0D92C100345EEB /* Player.swift in Sources */,
 				CFA96E3D1E0AE4AA00275AB5 /* AppDelegate.swift in Sources */,
 				CFADE0B61E1777ED0071FBD7 /* CoinsCounter.swift in Sources */,

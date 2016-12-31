@@ -145,23 +145,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
 
+    #if os(iOS)
     //MARK: - Touch methods
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if jumps < kJumps {
-            player?.jump()
-            jumps += 1
-            player?.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 200.0)) //impulse vs force?
-        }
+    if jumps < kJumps {
+    player?.jump()
+    jumps += 1
+    player?.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 200.0)) //impulse vs force?
     }
-    
+    }
+
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
     }
-    
+
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     }
-    
+
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
     }
+
+    #endif
 
 }
