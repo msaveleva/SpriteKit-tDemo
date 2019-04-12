@@ -35,7 +35,7 @@ class PlatformsGenerator {
             let platformRightPoint = platform.frame.origin.x + platform.frame.size.width
             let parentNodeLeftSize = parentNode.position.x - parentNode.frame.size.width/2
             if platformRightPoint < parentNodeLeftSize {
-                if let index = platforms.index(of: platform) {
+                if let index = platforms.firstIndex(of: platform) {
                     platform.removeFromParent()
                     platforms.remove(at: index)
                 }
