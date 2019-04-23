@@ -1,4 +1,4 @@
-# SpriteKit Demo
+# Mary's Adventure
 
 ![logo](https://github.com/msaveleva/SpriteKit-tDemo/blob/master/Graphics/catherine-st-star-mg-1.jpg)  
 
