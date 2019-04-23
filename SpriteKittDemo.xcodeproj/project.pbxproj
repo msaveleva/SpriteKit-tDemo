@@ -547,7 +547,7 @@
 				DEVELOPMENT_TEAM = 37QQLS7AS9;
 				INFOPLIST_FILE = SpriteKittDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pandadevel.SpriteKittDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "pandadevel.Mary-s-Adventure";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -560,7 +560,7 @@
 				DEVELOPMENT_TEAM = 37QQLS7AS9;
 				INFOPLIST_FILE = SpriteKittDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pandadevel.SpriteKittDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "pandadevel.Mary-s-Adventure";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
