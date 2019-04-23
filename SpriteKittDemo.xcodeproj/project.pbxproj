@@ -276,7 +276,7 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 37QQLS7AS9;
 						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -544,11 +544,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mariia Saveleva (DXNT8PV8FF)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 37QQLS7AS9;
 				INFOPLIST_FILE = SpriteKittDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pandadevel.Mary-s-Adventure";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pandadevel.MarysAdventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MarysAdventureDevelopmentProfile;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -557,11 +560,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mariia Saveleva (37QQLS7AS9)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 37QQLS7AS9;
 				INFOPLIST_FILE = SpriteKittDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pandadevel.Mary-s-Adventure";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pandadevel.MarysAdventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MarysAdventureDistributionProfile;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
