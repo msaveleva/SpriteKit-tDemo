@@ -1,0 +1,5 @@
+language: swift
+osx_image: xcode10.2
+script: 
+  - xcodebuild -project SpriteKittDemo.xcodeproj -scheme SpriteKittDemo -sdk iphonesimulator
+  - xcodebuild test -project SpriteKittDemo.xcodeproj -scheme SpriteKittDemoTests -sdk iphonesimulator build-for-testing

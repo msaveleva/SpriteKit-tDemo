@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C48F0D99226F47AB0093F808 /* SpriteKittDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48F0D98226F47AB0093F808 /* SpriteKittDemoTests.swift */; };
 		CF02E6CC1E1781E20009F98E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF02E6CA1E1781E20009F98E /* Main.storyboard */; };
 		CF02E6DE1E17825C0009F98E /* PlatformsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5647A71E12D60F00585936 /* PlatformsGenerator.swift */; };
 		CF02E6DF1E17825C0009F98E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4C2B811E0D92C100345EEB /* Player.swift */; };
@@ -41,7 +42,20 @@
 		CFD18D0B1E1794C100A395B8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CFD18D0A1E1794C100A395B8 /* GameScene.sks */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C48F0D9B226F47AB0093F808 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFA96E311E0AE4AA00275AB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFA96E381E0AE4AA00275AB5;
+			remoteInfo = SpriteKittDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		C48F0D96226F47AB0093F808 /* SpriteKittDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpriteKittDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C48F0D98226F47AB0093F808 /* SpriteKittDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKittDemoTests.swift; sourceTree = "<group>"; };
+		C48F0D9A226F47AB0093F808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF02E6BC1E1781E20009F98E /* Mary's Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mary's Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF02E6BE1E1781E20009F98E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF02E6C61E1781E20009F98E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +87,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C48F0D93226F47AB0093F808 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CF02E6B91E1781E20009F98E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C48F0D97226F47AB0093F808 /* SpriteKittDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				C48F0D98226F47AB0093F808 /* SpriteKittDemoTests.swift */,
+				C48F0D9A226F47AB0093F808 /* Info.plist */,
+			);
+			path = SpriteKittDemoTests;
+			sourceTree = "<group>";
+		};
 		CF02E6BD1E1781E20009F98E /* Mary's Adventure */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +220,7 @@
 			children = (
 				CFA96E3B1E0AE4AA00275AB5 /* SpriteKittDemo */,
 				CF02E6BD1E1781E20009F98E /* Mary's Adventure */,
+				C48F0D97226F47AB0093F808 /* SpriteKittDemoTests */,
 				CFA96E3A1E0AE4AA00275AB5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -199,6 +230,7 @@
 			children = (
 				CFA96E391E0AE4AA00275AB5 /* SpriteKittDemo.app */,
 				CF02E6BC1E1781E20009F98E /* Mary's Adventure.app */,
+				C48F0D96226F47AB0093F808 /* SpriteKittDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,6 +255,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C48F0D95226F47AB0093F808 /* SpriteKittDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C48F0D9D226F47AB0093F808 /* Build configuration list for PBXNativeTarget "SpriteKittDemoTests" */;
+			buildPhases = (
+				C48F0D92226F47AB0093F808 /* Sources */,
+				C48F0D93226F47AB0093F808 /* Frameworks */,
+				C48F0D94226F47AB0093F808 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C48F0D9C226F47AB0093F808 /* PBXTargetDependency */,
+			);
+			name = SpriteKittDemoTests;
+			productName = SpriteKittDemoTests;
+			productReference = C48F0D96226F47AB0093F808 /* SpriteKittDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CF02E6BB1E1781E20009F98E /* Mary's Adventure */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF02E6D01E1781E20009F98E /* Build configuration list for PBXNativeTarget "Mary's Adventure" */;
@@ -263,10 +313,16 @@
 		CFA96E311E0AE4AA00275AB5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = MariaSaveleva;
 				TargetAttributes = {
+					C48F0D95226F47AB0093F808 = {
+						CreatedOnToolsVersion = 10.2.1;
+						DevelopmentTeam = 37QQLS7AS9;
+						ProvisioningStyle = Manual;
+						TestTargetID = CFA96E381E0AE4AA00275AB5;
+					};
 					CF02E6BB1E1781E20009F98E = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 37QQLS7AS9;
@@ -295,11 +351,19 @@
 			targets = (
 				CFA96E381E0AE4AA00275AB5 /* SpriteKittDemo */,
 				CF02E6BB1E1781E20009F98E /* Mary's Adventure */,
+				C48F0D95226F47AB0093F808 /* SpriteKittDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C48F0D94226F47AB0093F808 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CF02E6BA1E1781E20009F98E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -327,6 +391,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C48F0D92226F47AB0093F808 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C48F0D99226F47AB0093F808 /* SpriteKittDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CF02E6B81E1781E20009F98E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +437,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C48F0D9C226F47AB0093F808 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFA96E381E0AE4AA00275AB5 /* SpriteKittDemo */;
+			targetProxy = C48F0D9B226F47AB0093F808 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		CF02E6CA1E1781E20009F98E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -393,6 +473,57 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C48F0D9E226F47AB0093F808 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 37QQLS7AS9;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SpriteKittDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = pandadevelopment.SpriteKittDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpriteKittDemo.app/SpriteKittDemo";
+			};
+			name = Debug;
+		};
+		C48F0D9F226F47AB0093F808 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 37QQLS7AS9;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SpriteKittDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = pandadevelopment.SpriteKittDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpriteKittDemo.app/SpriteKittDemo";
+			};
+			name = Release;
+		};
 		CF02E6CE1E1781E20009F98E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -407,7 +538,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "pandadevel.Mary-s-Adventure";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -425,7 +556,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "pandadevel.Mary-s-Adventure";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -575,6 +706,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C48F0D9D226F47AB0093F808 /* Build configuration list for PBXNativeTarget "SpriteKittDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C48F0D9E226F47AB0093F808 /* Debug */,
+				C48F0D9F226F47AB0093F808 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CF02E6D01E1781E20009F98E /* Build configuration list for PBXNativeTarget "Mary's Adventure" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
