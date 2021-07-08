@@ -11,14 +11,14 @@ import SpriteKit
 
 class CoinsCounter: SKSpriteNode {
 
-    private let kUIHeightMargin: CGFloat = 50.0
+    private let kUIHeightMargin: CGFloat = 25
 
     private var label: SKLabelNode?
     private var numberOfCoins = 0
 
     public func configure() {
         position = CGPoint(x: position.x,
-                           y: UIScreen.main.bounds.width / 2 - kUIHeightMargin)
+                           y: UIScreen.main.bounds.height / 2 + kUIHeightMargin)
         configureLabel()
     }
 
